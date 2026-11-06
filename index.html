@@ -121,8 +121,6 @@
 				<p>The following is a video that demonstrates how to export your conversation data from ChatGPT.</p>
 				<iframe 
 					id="tutorialVideo"
-					width="640" 
-					height="360" 
 					src="https://www.youtube.com/embed/HtwriatqbBc" 
 					title="How to export your conversation data from the LLM" 
 					frameborder="1" 
@@ -132,14 +130,49 @@
 
 				<h4 class=>Please upload your conversation data below. It MUST end in a .json or .JSON format.</h4>
 				<input type="file" id="LLMConversationData" accept="application/json">
-				<textarea id="output" rows="15" cols="80" readonly>File content will appear here.</textarea>
+				<textarea id="fileContent" rows="15" cols="80" readonly>File content will appear here.</textarea>
 			</div>
 
 			<!------------------------------------------------------------------->
 			
 			<div class="section-class" style="background-color: #AFC7CE">
-				<h2>Step 3: Rate each message for its risk of AI psychosis.</h2>
+				<h2>Part C: Rate each message for its risk of AI psychosis.</h2>
 				<p id="rating-task">Messages will load here once you have uploaded the .JSON file.</p>
+			</div>
+
+			<div class="section-class" style="background-color: #a3ceab">
+				<h2>Part D: Submission & (Optional) Further Steps </h2>
+				<p>You may opt into sharing the content of these potentially sensitive messages with the researcher, Andrew Yoon. These messages will be used to identify language patterns in AI psychosis in future studies and may be provided to other researchers at their request. In order to protect participants' privacy, any personal information such as names, addresses, contact information, etc. will be replaced with aliases.</p>
+				<div>
+					<label for="messageSharingOptIn">
+						<input type="radio" id="messageSharingOptIn" name="llm_source" value="chatgpt_value">
+						I understand these terms, and I would like to opt IN.
+					</label><br>
+					<label for="messageSharingOptOut">
+						<input type="radio" id="messageSharingOptOut" name="llm_source" value="claude_value">
+						I understand these terms, but I would like to opt OUT.
+					</label><br>
+				</div>
+
+				<p>You may opt into a short interview portion regarding your responses. The purpose of this is to gain further insight into potential indicators that can predict AI psychosis without invading the user's privacy by examining the messages' content. The interview portion will have the audio recorded, and any personal information will be redacted for the participant's safety. Not everyone who opts in will have an interview, but those who are interviewed will receive an invite via email to conduct the interview before January 31st, 2027.</p>
+				<div>
+					<label for="messageSharingOptIn">
+						<input type="radio" id="messageSharingOptIn" name="llm_source" value="chatgpt_value">
+						I understand these terms, and I would like to opt IN.
+					</label><br>
+					<label for="messageSharingOptOut">
+						<input type="radio" id="messageSharingOptOut" name="llm_source" value="claude_value">
+						I understand these terms, but I would like to opt OUT.
+					</label><br>
+				</div>
+
+
+				<p>The following file will be emailed to andrewy1224@gmail.com; please send any further inquiries to this email.</p>
+				
+				<textarea id="submissionData" rows="15" cols="80" readonly>Submission content will appear here.</textarea>
+
+
+				<button>submit!</button> <!--needs to send an email to me, currently does nothing.-->
 			</div>
 
 		</form>

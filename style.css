@@ -11,10 +11,14 @@ body, main, header, footer, .section-class {
     width: 100%;
     background-color: #EEE;
 }
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
 .section-class {
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 100vw;
+    width: 100%;
     gap: 20px;
 }
 .section-class :not(.section-class){
@@ -39,9 +43,22 @@ h1, h2, h3, h4, h5, h6, p, label {
 .input-field2 {
     width: 300px;
 }
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 label {
     cursor: pointer;
 }
 textarea, input {
     text-align: left;
+}
+textarea {
+    width: min(600px, 90vw);
+}
+#tutorialVideo {
+    width: min(600px, 90vw);
+    aspect-ratio: 16/9;
+    border: none;
 }

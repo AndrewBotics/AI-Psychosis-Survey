@@ -21,9 +21,9 @@ function handleUpdateJSON(e) {
 	reader.onload = function(e) {
 		try {
 			const jsonObject = JSON.parse(e.target.result);
-			document.getElementById("output").value = JSON.stringify(jsonObject, null, 2);
+			document.getElementById("fileContent").value = JSON.stringify(jsonObject, null, 2);
 		} catch (error) {
-			document.getElementById("output").value = "Failed to load.";
+			document.getElementById("fileContent").value = "Failed to load.";
 		}
 	}
 	reader.readAsText(file);
