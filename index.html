@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>AI Psychosis Survey</title>
+	
+	<meta name="description" content="Use this to participate in Andrew Yoon's survey for AP Research that uses timestamps from conversations with AI chatbots to detect AI psychosis."">
+	<meta name="author" content="andrewbotics">
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+		</nav>
+		<h1>The Role of Training Deep Learning on Metadata to Diagnose Artificial Intelligence (AI) Psychosis Patients</h1>
+		<p>A survey by Andrew Yoon of Tompkins High School's AP Research Program.</p>
+	</header>
+	
+	<main>
+		<form>
+			<div style="background-color: #AFC7CE;">
+				<h2>Part A: Questions About the Subject</h2>
+				<p class="red">Responses to personally identifying questions (marked in red) will be kept strictly confidential. Only the primary researcher (Andrew Yoon) will have access to this data, which will be securely destroyed at the end of the experiment.</p>
+				<h4>1. <span class="red">What is your name?</span></h4>
+				<label><span class="red">First Name:</span> <input id="responseFirstName" class="input-field1"></label><br><br>
+				<label><span class="red">Last Name:</span> <input id="responseLastName" class="input-field1"></label>
+				
+				<h4>2. <span class="red">Please provide an email address that can be used to contact you and inform you of the project's progress.</span></h4>
+				<input id="responseEmail" class="input-field2">
+
+				<h4>3. Which age group are you in?</h4>
+				<div class="horizontal-mcq">
+					<label for="teens">
+						<input type="radio" id="teens" name="age_response" value="teens_value">
+						13-19
+					</label><br>
+					<label for="twenties">
+						<input type="radio" id="twenties" name="age_response" value="twenties_value">
+						20-29
+					</label><br>
+					<label for="thirties">
+						<input type="radio" id="thirties" name="age_response" value="thirties_value">
+						30-39
+					</label><br>
+					<label for="forties">
+						<input type="radio" id="forties" name="age_response" value="forties_value">
+						40-49
+					</label><br>
+					<label for="fifties">
+						<input type="radio" id="fifties" name="age_response" value="fifties_value">
+						50-59
+					</label><br>
+					<label for="sixties">
+						<input type="radio" id="sixties" name="age_response" value="sixties_value">
+						60-69
+					</label><br>
+					<label for="seventies">
+						<input type="radio" id="seventies" name="age_response" value="seventies_value">
+						70-79
+					</label><br>
+					<label for="eighties">
+						<input type="radio" id="eighties" name="age_response" value="eighties_value">
+						80+
+					</label><br>
+				</div>
+
+				<h4>4. In one sentence, please describe how your AI psychosis was triggered.</h4>
+				<p>This will be used to help researchers identify common themes that cause AI psychosis. Please refrain from including personal information.</p>
+				<textarea id="psychosisTrigger" name="psychosisTrigger" rows="4" cols="50" placeholder="Type how your AI psychosis triggered here..."></textarea>
+
+
+
+				<h4>5. Have you had any other (professionally diagnosed) psychological conditions in the past?</h4>
+				<p>Please list as many as you are comfortable sharing. If you are not comfortable sharing any, please put "Prefer not to respond". If you have no history of psychological conditions, please put "N/A".</p>
+				<textarea id="psychologicalHistory" name="psychologicalHistory" rows="4" cols="50" placeholder="Type your psychological history here..."></textarea>
+
+				<h4>6. Do you work in a technology-related background?</h4>
+				<div>
+					<label for="software">
+						<input type="radio" id="software" name="tech_skill" value="software_value">
+						I develop or handle advanced software in some capacity (ex: programming, AI, IT, etc.).
+					</label><br>
+					<label for="technology">
+						<input type="radio" id="technology" name="tech_skill" value="technology_value">
+						I develop or handle technology in some capacity, but not software (ex: engineering, science, machinery repair, etc.).
+					</label><br>
+					<label for="miscellaneous">
+						<input type="radio" id="miscellaneous" name="tech_skill" value="misc_value">
+						I do not work in a technology-related field.
+					</label><br>
+				</div>
+				<br>
+
+			</div>
+		
+			<!------------------------------------------------------------------->
+			
+			<div style="background-color: #E8BBBE">
+				<h2>Part B: Importing the Conversation Data From an AI Model</h2>
+				<h4 class=>Which LLM model did you export your .JSON data from?</h4>
+				<div class="horizontal-mcq">
+					<label for="chatgpt">
+						<input type="radio" id="chatgpt" name="llm_source" value="chatgpt_value">
+						ChatGPT
+					</label><br>
+					<label for="claude">
+						<input type="radio" id="claude" name="llm_source" value="claude_value">
+						Claude
+					</label><br>
+					<label for="gemini">
+						<input type="radio" id="gemini" name="llm_source" value="gemini_value">
+						Gemini
+					</label><br>
+				</div>
+				<br>
+
+				<p>The following is a video that demonstrates how to export your conversation data from ChatGPT.</p>
+				<iframe 
+					width="640" 
+					height="360" 
+					src="https://youtu.be/HtwriatqbBc" 
+					title="How to export your conversation data from the LLM" 
+					frameborder="1" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+					allowfullscreen>
+				</iframe><br>
+
+				<h4 class=>Please upload your conversation data below. It MUST end in a .json or .JSON format.</h4>
+				<input type="file" id="LLMConversationData" accept="application/json">
+				<pre id="output">File content will appear here.</pre>
+				<br>
+			</div>
+
+			<!------------------------------------------------------------------->
+			
+			<div style="background-color: #F9F0BC">
+				<h2>Step 3: Rate each message for its risk of AI psychosis.</h2>
+				<p id="rating-task">Messages will load here once you have uploaded the .JSON file.</p>
+			</div>
+
+		</form>
+	</main>
+	
+	<footer>
+		<p>As you could probably predict, this website was created with 0% AI. I appreciate your interest in my research project! &copy; 2026 andrewbotics. All rights reserved.</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>
+

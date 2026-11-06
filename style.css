@@ -1,0 +1,28 @@
+* {
+    text-align: center;
+    justify-content: center;
+}
+header, footer, body {
+    background-color: #EEE;
+}
+.red {
+	color: #A00;
+}
+.horizontal-mcq {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.input-field1 {
+    width: 150px;
+}
+.input-field2 {
+    width: 300px;
+}
+label {
+    cursor: pointer;
+}
+textarea, input {
+    text-align: left;
+}
