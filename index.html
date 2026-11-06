@@ -23,11 +23,11 @@
 	
 	<main>
 		<form>
-			<div style="background-color: #AFC7CE;">
+			<div class="section-class" style="background-color: #F9F0BC">
 				<h2>Part A: Questions About the Subject</h2>
 				<p class="red">Responses to personally identifying questions (marked in red) will be kept strictly confidential. Only the primary researcher (Andrew Yoon) will have access to this data, which will be securely destroyed at the end of the experiment.</p>
 				<h4>1. <span class="red">What is your name?</span></h4>
-				<label><span class="red">First Name:</span> <input id="responseFirstName" class="input-field1"></label><br><br>
+				<label><span class="red">First Name:</span> <input id="responseFirstName" class="input-field1"></label>
 				<label><span class="red">Last Name:</span> <input id="responseLastName" class="input-field1"></label>
 				
 				<h4>2. <span class="red">Please provide an email address that can be used to contact you and inform you of the project's progress.</span></h4>
@@ -94,15 +94,14 @@
 						I do not work in a technology-related field.
 					</label><br>
 				</div>
-				<br>
 
 			</div>
 		
 			<!------------------------------------------------------------------->
 			
-			<div style="background-color: #E8BBBE">
+			<div class="section-class" style="background-color: #E8BBBE">
 				<h2>Part B: Importing the Conversation Data From an AI Model</h2>
-				<h4 class=>Which LLM model did you export your .JSON data from?</h4>
+				<h4 class=>Which AI hosting website are you exporting your .JSON data from?</h4>
 				<div class="horizontal-mcq">
 					<label for="chatgpt">
 						<input type="radio" id="chatgpt" name="llm_source" value="chatgpt_value">
@@ -132,13 +131,12 @@
 
 				<h4 class=>Please upload your conversation data below. It MUST end in a .json or .JSON format.</h4>
 				<input type="file" id="LLMConversationData" accept="application/json">
-				<pre id="output">File content will appear here.</pre>
-				<br>
+				<textarea id="output" rows="15" cols="80" readonly>File content will appear here.</textarea>
 			</div>
 
 			<!------------------------------------------------------------------->
 			
-			<div style="background-color: #F9F0BC">
+			<div class="section-class" style="background-color: #AFC7CE">
 				<h2>Step 3: Rate each message for its risk of AI psychosis.</h2>
 				<p id="rating-task">Messages will load here once you have uploaded the .JSON file.</p>
 			</div>

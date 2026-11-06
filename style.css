@@ -1,9 +1,27 @@
 * {
     text-align: center;
-    justify-content: center;
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+
 }
-header, footer, body {
+body, main, header, footer, .section-class {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     background-color: #EEE;
+}
+.section-class {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100vw;
+    gap: 20px;
+}
+.section-class :not(.section-class){
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6, p, label {
+    max-width: max(100px, 80vw)
 }
 .red {
 	color: #A00;
@@ -11,8 +29,9 @@ header, footer, body {
 .horizontal-mcq {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
+    justify-content: center;
 }
 .input-field1 {
     width: 150px;

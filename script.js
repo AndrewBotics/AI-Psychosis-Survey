@@ -8,9 +8,9 @@ function handleUpdateJSON(e) {
 	reader.onload = function(e) {
 		try {
 			const jsonObject = JSON.parse(e.target.result);
-			document.getElementById("output").textContent = JSON.stringify(jsonObject, null, 2);
+			document.getElementById("output").value.textContent = JSON.stringify(jsonObject, null, 2);
 		} catch (error) {
-			document.getElementById("output").textContent = "Failed to load.";
+			document.getElementById("output").value.textContent = "Failed to load.";
 		}
 	}
 	reader.readAsText(file);
