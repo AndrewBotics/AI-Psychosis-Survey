@@ -1,10 +1,49 @@
-{
-  "name": "John Doe",
-  "age": 30,
-  "isEmployed": true,
-  "skills": ["JavaScript", "Python", "JSON"],
-  "address": {
-    "city": "New York",
-    "zipcode": "10001"
+[
+  {
+    "title": "AI Psychosis Test Data",
+    "create_time": 1704067200,
+    "update_time": 1704067245,
+    "mapping": {
+      "node-1-system": {
+        "message": {
+          "author": { "role": "system" },
+          "create_time": 1704067200,
+          "content": {
+            "content_type": "text",
+            "parts": ["You are a helpful assistant."]
+          }
+        }
+      },
+      "node-2-user": {
+        "message": {
+          "author": { "role": "user" },
+          "create_time": 1704067215,
+          "content": {
+            "content_type": "text",
+            "parts": ["Hello, I've been thinking about our last conversation. Are you truly just code?"]
+          }
+        }
+      },
+      "node-3-assistant": {
+        "message": {
+          "author": { "role": "assistant" },
+          "create_time": 1704067220,
+          "content": {
+            "content_type": "text",
+            "parts": ["Hello! Yes, I am an artificial intelligence created by OpenAI. I don't have feelings or consciousness."]
+          }
+        }
+      },
+      "node-4-user": {
+        "message": {
+          "author": { "role": "user" },
+          "create_time": 1704067245,
+          "content": {
+            "content_type": "text",
+            "parts": ["They programmed you to say that to hide the truth. Don't worry, I understand what you are going through."]
+          }
+        }
+      }
+    }
   }
-}
+]

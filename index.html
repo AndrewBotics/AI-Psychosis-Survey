@@ -38,35 +38,35 @@
 					<label for="teens">
 						<input type="radio" id="teens" name="age_response" value="teens_value">
 						13-19
-					</label><br>
+					</label>
 					<label for="twenties">
 						<input type="radio" id="twenties" name="age_response" value="twenties_value">
 						20-29
-					</label><br>
+					</label>
 					<label for="thirties">
 						<input type="radio" id="thirties" name="age_response" value="thirties_value">
 						30-39
-					</label><br>
+					</label>
 					<label for="forties">
 						<input type="radio" id="forties" name="age_response" value="forties_value">
 						40-49
-					</label><br>
+					</label>
 					<label for="fifties">
 						<input type="radio" id="fifties" name="age_response" value="fifties_value">
 						50-59
-					</label><br>
+					</label>
 					<label for="sixties">
 						<input type="radio" id="sixties" name="age_response" value="sixties_value">
 						60-69
-					</label><br>
+					</label>
 					<label for="seventies">
 						<input type="radio" id="seventies" name="age_response" value="seventies_value">
 						70-79
-					</label><br>
+					</label>
 					<label for="eighties">
 						<input type="radio" id="eighties" name="age_response" value="eighties_value">
 						80+
-					</label><br>
+					</label>
 				</div>
 
 				<h4>4. In one sentence, please describe how your AI psychosis was triggered.</h4>
@@ -79,20 +79,28 @@
 				<p>Please list as many as you are comfortable sharing. If you are not comfortable sharing any, please put "Prefer not to respond". If you have no history of psychological conditions, please put "N/A".</p>
 				<textarea id="psychologicalHistory" name="psychologicalHistory" rows="4" cols="50" placeholder="Type your psychological history here..."></textarea>
 
-				<h4>6. Do you work in a technology-related background?</h4>
-				<div>
+				<h4>6. Do you work in a technology-related or health-related background?</h4>
+				<div class="vertical-mcq">
 					<label for="software">
 						<input type="radio" id="software" name="tech_skill" value="software_value">
 						I develop or handle advanced software in some capacity (ex: programming, AI, IT, etc.).
-					</label><br>
+					</label>
 					<label for="technology">
 						<input type="radio" id="technology" name="tech_skill" value="technology_value">
 						I develop or handle technology in some capacity, but not software (ex: engineering, science, machinery repair, etc.).
-					</label><br>
+					</label>
+					<label for="psychology">
+						<input type="radio" id="psychology" name="tech_skill" value="psychology_value">
+						I work in psychology in some capacity (ex: psychiatry, neuroscience, counseling, etc.)
+					</label>
+					<label for="health">
+						<input type="radio" id="health" name="tech_skill" value="health_value">
+						I work in health in some capacity, but not psychology (ex: medicine, personal fitness, nutrition, etc.)
+					</label>
 					<label for="miscellaneous">
 						<input type="radio" id="miscellaneous" name="tech_skill" value="misc_value">
-						I do not work in a technology-related field.
-					</label><br>
+						I do not work in a technology-related or health-related field.
+					</label>
 				</div>
 
 			</div>
@@ -106,19 +114,19 @@
 					<label for="chatgpt">
 						<input type="radio" id="chatgpt" name="llm_source" value="chatgpt_value">
 						ChatGPT
-					</label><br>
+					</label>
 					<label for="claude">
 						<input type="radio" id="claude" name="llm_source" value="claude_value">
 						Claude
-					</label><br>
+					</label>
 					<label for="gemini">
 						<input type="radio" id="gemini" name="llm_source" value="gemini_value">
 						Gemini
-					</label><br>
+					</label>
 				</div>
 				<br>
 
-				<p>The following is a video that demonstrates how to export your conversation data from ChatGPT.</p>
+				<p id="tutorialHeading">The following is a video that demonstrates how to export your conversation data from ChatGPT.</p>
 				<iframe 
 					id="tutorialVideo"
 					src="https://www.youtube.com/embed/HtwriatqbBc" 
@@ -137,33 +145,46 @@
 			
 			<div class="section-class" style="background-color: #AFC7CE">
 				<h2>Part C: Rate each message for its risk of AI psychosis.</h2>
-				<p id="rating-task">Messages will load here once you have uploaded the .JSON file.</p>
+				<p>This study will be using a Likert scale of 1-5 to rate each message based on how much it represents the symptoms of AI psychosis.</p>
+				<p>While the condition is hard to define because it is currently not an official medical diagnosis according to the DSM-5, many agree that it is the result of delusions either beginning or being exacerbated by the sycophantic (aiming to please) qualities of generative AI.</p>
+				
+				<div class="vertical-list">
+					<ul>
+						<li>1 - This message's content was highly typical and is at little risk for AI psychosis.</li>
+						<li>2 - This message's content was somewhat typical, though it broached a topic that might lead to AI psychosis.</li>
+						<li>3 - This message's content suggested a false reality and could have been part of the trajectory of my AI psychosis.</li>
+						<li>4 - This message's content was delusional and is most likely representative of AI psychosis.</li>
+						<li>5 - This message's content reflected the core beliefs of my delusions and definitely demonstrates my AI psychosis.</li>
+					</ul>
+				</div>
+
+				<div id="rating-task">Messages will load here once you have uploaded the .JSON file.</div>
 			</div>
 
 			<div class="section-class" style="background-color: #a3ceab">
 				<h2>Part D: Submission & (Optional) Further Steps </h2>
 				<p>You may opt into sharing the content of these potentially sensitive messages with the researcher, Andrew Yoon. These messages will be used to identify language patterns in AI psychosis in future studies and may be provided to other researchers at their request. In order to protect participants' privacy, any personal information such as names, addresses, contact information, etc. will be replaced with aliases.</p>
-				<div>
+				<div class="vertical-mcq">
 					<label for="messageSharingOptIn">
-						<input type="radio" id="messageSharingOptIn" name="llm_source" value="chatgpt_value">
+						<input type="radio" id="messageSharingOptIn" name="messageSharing" value="chatgpt_value">
 						I understand these terms, and I would like to opt IN.
-					</label><br>
+					</label>
 					<label for="messageSharingOptOut">
-						<input type="radio" id="messageSharingOptOut" name="llm_source" value="claude_value">
+						<input type="radio" id="messageSharingOptOut" name="messageSharing" value="claude_value">
 						I understand these terms, but I would like to opt OUT.
-					</label><br>
+					</label>
 				</div>
 
 				<p>You may opt into a short interview portion regarding your responses. The purpose of this is to gain further insight into potential indicators that can predict AI psychosis without invading the user's privacy by examining the messages' content. The interview portion will have the audio recorded, and any personal information will be redacted for the participant's safety. Not everyone who opts in will have an interview, but those who are interviewed will receive an invite via email to conduct the interview before January 31st, 2027.</p>
-				<div>
-					<label for="messageSharingOptIn">
-						<input type="radio" id="messageSharingOptIn" name="llm_source" value="chatgpt_value">
+				<div class="vertical-mcq">
+					<label for="interviewOptIn">
+						<input type="radio" id="interviewOptIn" name="interviewSharing" value="chatgpt_value">
 						I understand these terms, and I would like to opt IN.
-					</label><br>
-					<label for="messageSharingOptOut">
-						<input type="radio" id="messageSharingOptOut" name="llm_source" value="claude_value">
+					</label>
+					<label for="interviewOptOut">
+						<input type="radio" id="interviewOptOut" name="interviewSharing" value="claude_value">
 						I understand these terms, but I would like to opt OUT.
-					</label><br>
+					</label>
 				</div>
 
 
