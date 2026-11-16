@@ -35,7 +35,7 @@
 				<h4>2. <span class="red">Please provide an email address that can be used to contact you and inform you of the project's progress.</span></h4>
 				<input id="responseEmail" class="input-field2">
 
-				<h4>3. Which age group are you in?</h4>
+				<h4>3. Which age group do you belong to?</h4>
 				<div class="horizontal-mcq">
 					<label for="teens">
 						<input type="radio" id="teens" name="age_response" value="teens_value">
@@ -71,15 +71,53 @@
 					</label>
 				</div>
 
-				<h4>4. In one sentence, please describe how your AI psychosis was triggered.</h4>
-				<p>This will be used to help researchers identify common themes that cause AI psychosis. Please refrain from including personal information.</p>
-				<textarea id="psychosisTrigger" name="psychosisTrigger" rows="4" cols="50" placeholder="Type how your AI psychosis triggered here..."></textarea>
+				<h4>4. What gender do you belong to?</h4>
+				<div class="horizontal-mcq">
+					<label for="male">
+						<input type="radio" id="male" name="gender_response" value="male_value">
+						Male
+					</label>
+					<label for="female">
+						<input type="radio" id="female" name="gender_response" value="female_value">
+						Female
+					</label>
+					<label for="other_gender">
+						<input type="radio" id="other_gender" name="gender_response" value="other_gender_value">
+						Other
+					</label>
+				</div>
 
-
-
-				<h4>5. Have you had any other (professionally diagnosed) psychological conditions in the past?</h4>
-				<p>Please list as many as you are comfortable sharing. If you are not comfortable sharing any, please put "Prefer not to respond". If you have no history of psychological conditions, please put "N/A".</p>
-				<textarea id="psychologicalHistory" name="psychologicalHistory" rows="4" cols="50" placeholder="Type your psychological history here..."></textarea>
+				<h4>5. What ethnicity do you belong to?</h4>
+				<div class="horizontal-mcq">
+					<label for="asian">
+						<input type="radio" id="asian" name="race_response" value="asian_value">
+						Asian
+					</label>
+					<label for="black">
+						<input type="radio" id="black" name="race_response" value="black_value">
+						Black
+					</label>
+					<label for="hispanic">
+						<input type="radio" id="hispanic" name="race_response" value="hispanic_value">
+						Hispanic
+					</label>
+					<label for="native">
+						<input type="radio" id="native" name="race_response" value="native_value">
+						Native American
+					</label>
+					<label for="pacific">
+						<input type="radio" id="pacific" name="race_response" value="pacific_value">
+						Pacific Islander
+					</label>
+					<label for="white">
+						<input type="radio" id="white" name="race_response" value="white_value">
+						White
+					</label>
+					<label for="mixed_race">
+						<input type="radio" id="mixed_race" name="race_response" value="mixed_race_value">
+						Mixed
+					</label>
+				</div>
 
 				<h4>6. Do you work in a technology-related or health-related background?</h4>
 				<div class="vertical-mcq">
@@ -104,6 +142,14 @@
 						I do not work in a technology-related or health-related field.
 					</label>
 				</div>
+
+				<h4>7. In one sentence, please describe how your AI psychosis was triggered.</h4>
+				<p>This will be used to help researchers identify common themes that cause AI psychosis. Please refrain from including personal information.</p>
+				<textarea id="psychosisTrigger" name="psychosisTrigger" rows="4" cols="50" placeholder="Type how your AI psychosis triggered here..."></textarea>
+
+				<h4>8. Have you had any other (professionally diagnosed) psychological conditions in the past?</h4>
+				<p>Please list as many as you are comfortable sharing. If you are not comfortable sharing any, please put "Prefer not to respond". If you have no history of psychological conditions, please put "N/A".</p>
+				<textarea id="psychologicalHistory" name="psychologicalHistory" rows="4" cols="50" placeholder="Type your psychological history here..."></textarea>
 
 			</div>
 		
